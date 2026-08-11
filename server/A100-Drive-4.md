@@ -77,7 +77,7 @@ CUDA_VISIBLE_DEVICES=1,0 python train.py
 watch -n 5 nvidia-smi --query-gpu=index,temperature.gpu,utilization.gpu,memory.used --format=csv
 ```
 
-单容器内存上限是 94 GiB；两个容器合计 100 GiB。swap 只用于短暂尖峰，内存持续过高时进程可能被终止。GPU 显存没有容器隔离。
+单容器内存上限是 94 GiB；两个容器合计 100 GiB。swap 只用于短暂尖峰，内存持续过高时进程可能被终止。GPU 显存没有容器隔离。核心频率请保持默认的 1140 MHz。
 
 ## 传文件
 
